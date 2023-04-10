@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="300.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ui.Control">
+   <children>
+      <GridPane alignment="CENTER" prefHeight="146.0" prefWidth="300.0" style="-fx-background-color: #ffffff;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" />
+          <RowConstraints minHeight="11.0" percentHeight="0.0" prefHeight="30.0" valignment="BOTTOM" />
+          <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="22.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="35.0" vgrow="ALWAYS" />
+            <RowConstraints minHeight="10.0" prefHeight="25.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" contentDisplay="TOP" minHeight="-Infinity" minWidth="-Infinity" prefHeight="51.0" prefWidth="301.0" text="Підписники" textAlignment="CENTER" textOverrun="CLIP">
+               <font>
+                  <Font name="Arial Black" size="25.0" />
+               </font>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </Label>
+            <Label fx:id="textSubscriber" alignment="BOTTOM_CENTER" contentDisplay="RIGHT" prefHeight="32.0" prefWidth="301.0" text="0" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial Black" size="22.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="arro" fitHeight="18.0" fitWidth="18.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+               <padding>
+                  <Insets bottom="-3.0" left="20.0" />
+               </padding>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="301.0" text="Перегляди" textAlignment="CENTER" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="textView" alignment="CENTER" contentDisplay="CENTER" prefHeight="27.0" prefWidth="307.0" text="0" textAlignment="CENTER" GridPane.rowIndex="3">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="21.0" prefWidth="300.0" text="Відео" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label fx:id="textVideo" alignment="CENTER" contentDisplay="CENTER" ellipsisString="" prefHeight="16.0" prefWidth="300.0" text="0" textAlignment="JUSTIFY" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="BOTTOM">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <padding>
+                  <Insets left="-3.0" />
+               </padding></Label>
+            <Label fx:id="result" alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" maxWidth="302.0" prefHeight="18.0" prefWidth="302.0" text="Оновлено чч:мм" GridPane.rowIndex="5">
+               <font>
+                  <Font size="10.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+      </GridPane>
+      <Button fx:id="open" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="265.0" layoutY="10.0" maxHeight="30.0" maxWidth="30.0" mnemonicParsing="false" textAlignment="CENTER" />
+      <Button fx:id="saveData" alignment="BOTTOM_LEFT" layoutX="224.0" layoutY="500.0" mnemonicParsing="false" text="Зберегти" textAlignment="CENTER" />
+      <Separator layoutX="5.0" layoutY="150.0" prefHeight="3.0" prefWidth="290.0" />
+      <ChoiceBox fx:id="setUserProfail" layoutX="10.0" layoutY="160.0" prefHeight="26.0" prefWidth="152.0" stylesheets="@../combo-size.css" />
+      <TextField fx:id="authorization" layoutX="10.0" layoutY="315.0" promptText="authorization" />
+      <TextField fx:id="cookie" layoutX="10.0" layoutY="352.0" promptText="cookie" />
+      <TextField fx:id="referer" layoutX="10.0" layoutY="389.0" promptText="referer" />
+      <TextField fx:id="authuser" layoutX="10.0" layoutY="426.0" promptText="x-goog-authuser" />
+      <Button fx:id="setData" layoutX="225.0" layoutY="160.0" mnemonicParsing="false" text="Вибрати" />
+      <TextField fx:id="pageid" layoutX="10.0" layoutY="463.0" promptText="x-goog-pageid" />
+      <TextField fx:id="delegationCon" layoutX="10.0" layoutY="500.0" prefHeight="26.0" prefWidth="182.0" promptText="x-youtube-delegation-context" />
+      <ChoiceBox fx:id="chooseData" layoutX="11.0" layoutY="211.0" prefWidth="150.0" stylesheets="@../combo-size.css" />
+      <Button fx:id="deleteData" layoutX="220.0" layoutY="210.0" mnemonicParsing="false" text="Видалити" />
+      <Separator layoutX="6.0" layoutY="295.0" prefHeight="3.0" prefWidth="290.0" />
+      <Button fx:id="openSetChannel" layoutX="187.0" layoutY="258.0" mnemonicParsing="false" text="Записати канал" />
+      <Separator layoutX="68.0" layoutY="54.0" prefHeight="3.0" prefWidth="167.0" />
+      <Button fx:id="btnInfo" layoutX="208.0" layoutY="313.0" mnemonicParsing="false" text="Інформація" />
+   </children>
+</AnchorPane>
